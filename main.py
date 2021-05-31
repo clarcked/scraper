@@ -57,11 +57,13 @@ def main():
     print('starting telegram clarcked bot')
     updater = Updater(token)
     updater.dispatcher.add_handler(CommandHandler('titulos', start))
-    print('bot is ready ...')
+    msg = 'bot is ready ...'
+    print(msg)
+    telegram_send.send(messages=[msg])
     updater.start_polling()
     updater.idle()
 
 
 if __name__ == '__main__':
+    process = set_interval(start, 20)
     main()
-    process = set_interval(main, 20)
