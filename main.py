@@ -53,7 +53,7 @@ def start(update=None, context=None):
 
 
 def main():
-    token = '1787635419:AAFy_1HCK0usZ5KtDXNTTWP6PdS1D49HlQg'
+    token = ''
     print('starting telegram clarcked bot')
     updater = Updater(token)
     updater.dispatcher.add_handler(CommandHandler('titulos', start))
